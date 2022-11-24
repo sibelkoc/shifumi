@@ -21,7 +21,9 @@ class App extends Component {
   }
 
   click = (event) => {
-    this.setState({Kylie : event.currentTarget.name},() => {      
+    this.setState({Kylie : event.currentTarget.name},() => {    
+            console.log("je choisis : ",this.state.Kylie);
+  
       this.BadGrammordHand();
      
     })
