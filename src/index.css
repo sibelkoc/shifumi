@@ -50,6 +50,13 @@ body {
 
 }
 
+.TitleGame{
+  margin-top: 60px;
+  font-size: 36px;
+  font-family: "blobb";
+  color: #873e23;
+  font-weight: 600;
+}
 
 img:hover{
   animation: pulse 1s infinite;
