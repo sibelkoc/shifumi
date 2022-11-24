@@ -1,13 +1,63 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+
+@font-face {
+  font-family: "blobb";   
+  src: local("blobb"),
+    url(../public/font/blobb.ttf) format("ttf");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: url(/public/Sans\ titre.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+  cursor: crosshair;
+}
+
+
+.theHands {
+  width: 40%;
+  justify-content: space-between; 
+  display: table-caption;
+  margin: 70px auto;
+  color: #873e23;
+}
+
+.KylieHand{
+  display: flex;
+  position: absolute;
+  margin-left: 25%;
+  /* margin-top: 0px; */
+  background: bisque;
+  border-radius: 50%;
+  padding: 30px;
+
+}
+
+.GrammordHand{
+  display: flex;
+  position: absolute;
+  margin-left: 55%;
+  /* margin-top: 0px; */
+  background: bisque;
+  border-radius: 50%;
+  padding: 30px;
+
+}
+
+
+img:hover{
+  animation: pulse 1s infinite;
+  animation-timing-function: linear; 
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2);
+  100% { transform: scale(1); }
+  }
 }
