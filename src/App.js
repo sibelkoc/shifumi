@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import AllHands from "./AllHands";
 import ResultTitle from "./ResultTitle";
+import Historical from './Historical';
 
 
 class App extends Component {
