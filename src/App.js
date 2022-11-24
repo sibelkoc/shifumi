@@ -3,6 +3,7 @@ import './App.css';
 import AllHands from "./AllHands";
 import ResultTitle from "./ResultTitle";
 import Historical from './Historical';
+import AnimateTxt from './AnimateTxt';
 
 
 class App extends Component {
@@ -53,6 +54,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <div className="titleGame">
+           <AnimateTxt  textTitle/>
+        </div>
 
         <div className="theHands">
         {this.state.theHand.map((element, index) => {
