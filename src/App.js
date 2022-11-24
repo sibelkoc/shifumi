@@ -60,13 +60,15 @@ class App extends Component {
         })}
         </div>
 
-  
-          <Historical  theHand={this.state.Kylie} nom={"What you choose with Kylie"} />
-  
-          <Historical  theHand={this.state.BadGrammord} nom={"What bad Grammord choose !"} />
+      <div className='theHand'>
+        <div className='KylieHand'>
+        <Historical  theHand={this.state.Kylie} nom={"What you choose with Kylie"} />
+        </div>
+        <div className="GrammordHand">
+        <Historical  theHand={this.state.BadGrammord} nom={"What bad Grammord choose !"} />
+        </div>
+      </div>
 
-
-        
 
         <div>
           <ResultTitle result={this.state.theWinner}/>
