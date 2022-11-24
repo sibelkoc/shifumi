@@ -58,6 +58,10 @@ class App extends Component {
            <AnimateTxt  textTitle/>
         </div>
 
+        <div className='winPosition'>
+          <ResultTitle result={this.state.theWinner}/>
+        </div>
+
         <div className="theHands">
         {this.state.theHand.map((element, index) => {
           return <AllHands  function={this.click} key={index} img={element}/>
@@ -74,9 +78,7 @@ class App extends Component {
       </div>
 
 
-        <div>
-          <ResultTitle result={this.state.theWinner}/>
-        </div>
+
 
       
       </div>

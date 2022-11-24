@@ -58,6 +58,10 @@ body {
   font-weight: 600;
 }
 
+.winPosition{
+  font-size: 25px;
+}
+
 img:hover{
   animation: pulse 1s infinite;
   animation-timing-function: linear; 
