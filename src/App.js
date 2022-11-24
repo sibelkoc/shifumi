@@ -48,6 +48,7 @@ class App extends Component {
   }
 
 
+
   render() {
     return (
       <div className="App">
@@ -57,6 +58,14 @@ class App extends Component {
           return <AllHands  function={this.click} key={index} img={element}/>
         })}
         </div>
+
+  
+          <Historical  theHand={this.state.Kylie} nom={"What you choose with Kylie"} />
+  
+          <Historical  theHand={this.state.BadGrammord} nom={"What bad Grammord choose !"} />
+
+
+        
 
         <div>
           <ResultTitle result={this.state.theWinner}/>
