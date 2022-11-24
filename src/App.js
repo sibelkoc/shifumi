@@ -21,11 +21,27 @@ class App extends Component {
   }
 
   click = (event) => {
-    
     this.setState({Kylie : event.currentTarget.name},() => {      
       this.BadGrammordHand();
      
     })
+  }
+
+  theWinner = () => {
+    const { Kylie, BadGrammord } = this.state;
+    if (Kylie === BadGrammord) {
+      return this.setState({ theWinner: "Equal !" })
+    }
+    else if ((BadGrammord === "paper" && Kylie === "rock") ||
+      (BadGrammord === "rock" && Kylie === "scissors") ||
+      (BadGrammord === "scissors" && Kylie === "paper")
+    ) {
+      return this.setState({ theWinner: "You lost !" },() => {
+      });
+
+    } else 
+      return this.setState({ theWinner: "You win !"},() => {
+      });
   }
 
 
