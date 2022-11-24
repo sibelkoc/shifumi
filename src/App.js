@@ -20,7 +20,14 @@ class App extends Component {
     })
   }
 
- 
+  click = (event) => {
+    
+    this.setState({Kylie : event.currentTarget.name},() => {      
+      this.BadGrammordHand();
+     
+    })
+  }
+
 
   render() {
     return (
