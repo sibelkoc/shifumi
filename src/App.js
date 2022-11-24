@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import AllHands from "./AllHands";
+import ResultTitle from "./ResultTitle";
 
 
 class App extends Component {
@@ -22,7 +23,7 @@ class App extends Component {
 
   click = (event) => {
     this.setState({Kylie : event.currentTarget.name},() => {    
-            console.log("je choisis : ",this.state.Kylie);
+           // console.log("je choisis : ",this.state.Kylie);
   
       this.BadGrammordHand();
      
@@ -57,6 +58,9 @@ class App extends Component {
         })}
         </div>
 
+        <div>
+          <ResultTitle result={this.state.theWinner}/>
+        </div>
 
       
       </div>
