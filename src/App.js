@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import AllHands from "./AllHands";
 import ResultTitle from "./ResultTitle";
@@ -16,7 +16,7 @@ class App extends Component {
       characters: ["Kylie", "Grammord"],
       Kylie: "",
       BadGrammord: "",
-      theWinner: "", 
+      theWinner:"",
       isActive: true
     
     };
@@ -36,37 +36,34 @@ class App extends Component {
 
   click = (event) => {
     this.setState({Kylie : event.currentTarget.name},() => {    
-           // console.log("je choisis : ",this.state.Kylie);
-  
       this.BadGrammordHand();
      
     })
   }
 
-  
+
 
   theWinner = () => {
     const { Kylie, BadGrammord } = this.state;
+
     if (Kylie === BadGrammord) {
-      return this.setState({ theWinner: "Equal !" }) 
+      return alert("Equal... Try again !"); 
     }
+
     else if ((BadGrammord === "paper" && Kylie === "rock") ||
       (BadGrammord === "rock" && Kylie === "scissors") ||
       (BadGrammord === "scissors" && Kylie === "paper")
     ) {
-      return this.setState({ theWinner: "You lost !" },() => {
-      });
+      return alert("You lost !") ;
 
     } else 
-      return this.setState({ theWinner: "You win !"},() => {
-      });
+    return alert("You Win !") ;
   }
 
 
   render() {
     if (this.state.isActive) {
       return(
-   
         <div
         className="alert alert-warning alert-dismissible"
         role="alert"
@@ -119,11 +116,6 @@ class App extends Component {
     }
     return (
       <div className="App">
-      
-        <div className='winPosition'>
-          <ResultTitle result={this.state.theWinner}/>
-        </div>
-
         <div className="theHands">
         {this.state.theHand.map((element, index) => {
           return <AllHands  function={this.click} key={index} img={element}/>
@@ -131,9 +123,6 @@ class App extends Component {
         </div>
 
       <div className='theHand'>
-        <div className='KylieHand'>
-        <Historical  theHand={this.state.Kylie} nom={"What Kylie choose with you"} />
-        </div>
         <div className="GrammordHand">
         <Historical  theHand={this.state.BadGrammord} nom={"What bad Grammord choose !"} />
         </div>

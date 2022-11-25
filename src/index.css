@@ -12,6 +12,7 @@ h4{
   font-size: 15px !important;
 }
 
+
 body {
   margin: 0;
   padding: 0;
@@ -236,4 +237,20 @@ button.playButton{
       opacity: 1;
       transform: translate(0, 0);
     }
+  }
+
+  #customAlert{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+
+  #box{
+    border-radius: 5px;
+    margin-top: 100px;
+    margin-left: 400px;
   }
