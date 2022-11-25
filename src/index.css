@@ -6,6 +6,11 @@
     url(../public/font/blobb.ttf) format("ttf");
 }
 
+h4{
+  color: #873e23;
+  font: 600;
+  font-size: 15px !important;
+}
 
 body {
   margin: 0;
@@ -31,20 +36,22 @@ body {
   display: flex;
   position: absolute;
   margin-left: 25%;
-  /* margin-top: 0px; */
   background: bisque;
-  border-radius: 50%;
+  border-radius: 5%;
+  width: 250px;
   padding: 30px;
-
+  top:60%;
 }
 
 .GrammordHand{
   display: flex;
   position: absolute;
-  margin-left: 55%;
-  /* margin-top: 0px; */
+  margin-left: 72%;
   background: bisque;
-  border-radius: 50%;
+  border-radius: 5%;
+  top:41%;
+  width: 250px;
+  height: 180px;
   padding: 30px;
 
 }
@@ -57,6 +64,8 @@ body {
   font-weight: 600;
   justify-content: center;
   display: flex;
+  height: 180px;
+
 }
 
 .winPosition{
@@ -72,7 +81,7 @@ button.playButton{
   align-items: center;
   justify-content: center;
   display: flex;
-  margin-top: 15px;
+  margin-top: 80px;
 }
 
 .playButton{
@@ -87,6 +96,7 @@ button.playButton{
 
 .playButton:hover{
   transform: scale(1.33);
+  cursor: grab;
 }
 .alert{
   height: 100vh;
@@ -96,14 +106,34 @@ button.playButton{
   background-repeat: no-repeat ;
   height: 200px;
 }
+
+.textSlideFirstStep{
+  animation-name: animate-slide-left;
+  animation-delay: 1.8s;
+  animation-duration: 0.7s;
+  animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+}
+
 .Parasite{
   background-image: url(../public/img/parasite.png) !important;
   background-repeat: no-repeat ;
-  height: 100%;
+  height: 100px;
   transform: scale(1.2);
   margin-top: 100px;
   margin-left:20px;
 }
+
+.textSlideSecondStep{
+  animation-name: animate-slide-left;
+  animation-delay: 1.8s;
+  animation-duration: 0.7s;
+  animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
+  animation-delay: 3s;
+  animation-fill-mode: backwards;
+}
+
 .Grammord{
   background-image: url(../public/img/grammord.png) !important;
   background-repeat: no-repeat ;
@@ -112,8 +142,18 @@ button.playButton{
   margin-top:25px;
   transform: scale(2);
   animation-iteration-count: infinite;
-  animation-delay: 7s;
+  animation-delay: 4s;
 }
+
+.textSlidethirdStep{
+  animation-name: animate-slide-left;
+  animation-delay: 1.8s;
+  animation-duration: 0.7s;
+  animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
+  animation-delay: 5s;
+  animation-fill-mode: backwards;
+}
+
 .displayBox{
   display: flex;
   flex-direction: row;
@@ -185,4 +225,15 @@ button.playButton{
     80% { transform: translate(-1px, -1px) rotate(1deg); }
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+  @keyframes animate-slide-left {
+    0% {
+      opacity: 0;
+      transform: translate(-40px, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
   }

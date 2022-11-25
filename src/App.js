@@ -17,7 +17,7 @@ class App extends Component {
       Kylie: "",
       BadGrammord: "",
       theWinner: "", 
-      isActive: true,
+      isActive: true
     
     };
   }
@@ -48,7 +48,7 @@ class App extends Component {
   theWinner = () => {
     const { Kylie, BadGrammord } = this.state;
     if (Kylie === BadGrammord) {
-      return this.setState({ theWinner: "Equal !" })
+      return this.setState({ theWinner: "Equal !" }) 
     }
     else if ((BadGrammord === "paper" && Kylie === "rock") ||
       (BadGrammord === "rock" && Kylie === "scissors") ||
@@ -75,31 +75,36 @@ class App extends Component {
            <AnimateTxt  textTitle/>
         </div>
         <br></br>
-    <div className='displayBox'>
-        <div className='firstStep'>
-        <strong>Kylie :</strong> "Hello, I'm Kylie!"<br>
-        </br>"I would like you, to help me, to fight the bad grammord mountain !"
-        <br></br>
-          "There is a mean parasite who has taken possession of him!"
-        <div className="Kylie"></div>
-        </div>
+          <div className='displayBox'>
+              <div className='firstStep'>
+                <div className='textSlideFirstStep'>
+                    <strong>Kylie :</strong> "Hello, I'm Kylie!"<br>
+                    </br>"I would like you, to help me, to fight the bad grammord mountain !"
+                    <br></br>
+                      "There is a mean parasite who has taken possession of him!"
+                </div>
+              <div className="Kylie"></div>
+              </div>
 
-        <div className='secondStep'>
-        <strong>Parasite :</strong> "Hehe, I' was very hungry!"<br>
-        </br>"So I ate the soul of the mountain !"
-        <div className="Parasite"></div>
-        </div>
+              <div className='secondStep'>
+                <div className='textSlideSecondStep'>
+              <strong>Parasite :</strong> "Hehe, I' was very hungry!"<br>
+              </br>"So I ate the soul of the mountain !"
+              </div>
+              <div className="Parasite"></div>
+              </div>
 
-        <div className='thirdStep'>
-        <strong>Grammord :</strong> "I'm the mean mountain that everyone calls Bad Grammord !"<br>
-        </br>"If you win, I will die."
-        <br></br>
-          "If you lose, you'll stay stuck with me."
-        <div className="Grammord"></div>
-        </div>
-    </div>
-<br></br>
-        <button
+              <div className='thirdStep'>
+                <div className='textSlidethirdStep'>
+              <strong>Grammord :</strong> "I'm the mean mountain that everyone calls Bad Grammord !"<br>
+              </br>"If you win, I will die."
+              <br></br>
+                "If you lose, you'll stay stuck with me."
+                </div>
+              <div className="Grammord"></div>
+              </div>
+          </div>
+          <button
           type="button"
           className="playButton"
           data-dismiss="alert"
@@ -107,9 +112,6 @@ class App extends Component {
         >
           <span aria-hidden="true">Let's play</span>
         </button>
-        
-    
-        
         
         </div>
 
