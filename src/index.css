@@ -55,6 +55,8 @@ body {
   font-family: "blobb";
   color: #873e23;
   font-weight: 600;
+  justify-content: center;
+  display: flex;
 }
 
 .winPosition{
@@ -70,6 +72,7 @@ button.playButton{
   align-items: center;
   justify-content: center;
   display: flex;
+  margin-top: 15px;
 }
 
 .playButton{
@@ -79,14 +82,107 @@ button.playButton{
   font-size: 20px;
   background-color: bisque;
   border-color: bisque;
+  margin-left:45%;
 }
 
 .playButton:hover{
   transform: scale(1.33);
 }
+.alert{
+  height: 100vh;
+}
+.Kylie{
+  background-image: url(../public/img/Kylie.png) !important;
+  background-repeat: no-repeat ;
+  height: 200px;
+}
+.Parasite{
+  background-image: url(../public/img/parasite.png) !important;
+  background-repeat: no-repeat ;
+  height: 100%;
+  transform: scale(1.2);
+  margin-top: 100px;
+  margin-left:20px;
+}
+.Grammord{
+  background-image: url(../public/img/grammord.png) !important;
+  background-repeat: no-repeat ;
+  height: 100%;
+  animation: shake 0.5s;
+  margin-top:25px;
+  transform: scale(2);
+  animation-iteration-count: infinite;
+  animation-delay: 7s;
+}
+.displayBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.firstStep{
+  background-color: #fcdbae;
+  padding: 15px;
+  border-radius: 25px;
+  width:25%;
+  animation-duration: 0.7s;
+  animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
+  animation-delay: .5s;
+  animation-fill-mode: backwards;
+  animation-name: animate-pop;
+}
+
+.secondStep{
+  background-color: #f9da7f;
+  padding: 15px;
+  border-radius: 25px;
+  width:25%;
+  animation-duration: 0.7s;
+  animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+  animation-name: animate-pop;
+}
+
+.thirdStep{
+  background-color: #ff6b3e;
+  padding: 15px;
+  border-radius: 25px;
+  width:25%;
+  animation-duration: 0.7s;
+  animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
+  animation-delay: 4s;
+  animation-fill-mode: backwards;
+  animation-name: animate-pop;
+}
+
 @keyframes pulse {
   0% { transform: scale(1); }
-  50% { transform: scale(1.2);
+  50% { transform: scale(1.2);}
   100% { transform: scale(1); }
   }
-}
+
+  @keyframes animate-pop {
+    0% {
+      opacity: 0;
+      transform: scale(0.5, 0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1, 1);
+    }
+  }
+
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }

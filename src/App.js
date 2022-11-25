@@ -1,10 +1,10 @@
-import React, { Component, useState, render } from 'react';
+import React, { Component, useState } from 'react';
 import './App.css';
 import AllHands from "./AllHands";
 import ResultTitle from "./ResultTitle";
 import Historical from './Historical';
 import AnimateTxt from './AnimateTxt';
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -13,11 +13,13 @@ class App extends Component {
     super(props);
     this.state = {
       theHand: ["rock", "paper", "scissors"],
+      characters: ["Kylie", "Grammord"],
       Kylie: "",
       BadGrammord: "",
       theWinner: "", 
-      isActive: true
-    }
+      isActive: true,
+    
+    };
   }
   hideAlert() {
     this.setState({
@@ -41,7 +43,7 @@ class App extends Component {
     })
   }
 
-    
+  
 
   theWinner = () => {
     const { Kylie, BadGrammord } = this.state;
@@ -64,7 +66,7 @@ class App extends Component {
   render() {
     if (this.state.isActive) {
       return(
-        
+   
         <div
         className="alert alert-warning alert-dismissible"
         role="alert"
@@ -72,10 +74,31 @@ class App extends Component {
         <div className="titleGame">
            <AnimateTxt  textTitle/>
         </div>
-        
-        <strong>Kylie :</strong> Hello, help me to fight the bad grammord !
         <br></br>
+    <div className='displayBox'>
+        <div className='firstStep'>
+        <strong>Kylie :</strong> "Hello, I'm Kylie!"<br>
+        </br>"I would like you, to help me, to fight the bad grammord mountain !"
         <br></br>
+          "There is a mean parasite who has taken possession of him!"
+        <div className="Kylie"></div>
+        </div>
+
+        <div className='secondStep'>
+        <strong>Parasite :</strong> "Hehe, I' was very hungry!"<br>
+        </br>"So I ate the soul of the mountain !"
+        <div className="Parasite"></div>
+        </div>
+
+        <div className='thirdStep'>
+        <strong>Grammord :</strong> "I'm the mean mountain that everyone calls Bad Grammord !"<br>
+        </br>"If you win, I will die."
+        <br></br>
+          "If you lose, you'll stay stuck with me."
+        <div className="Grammord"></div>
+        </div>
+    </div>
+<br></br>
         <button
           type="button"
           className="playButton"
@@ -84,7 +107,11 @@ class App extends Component {
         >
           <span aria-hidden="true">Let's play</span>
         </button>
-  </div>
+        
+    
+        
+        
+        </div>
 
       )
     }
@@ -103,7 +130,7 @@ class App extends Component {
 
       <div className='theHand'>
         <div className='KylieHand'>
-        <Historical  theHand={this.state.Kylie} nom={"What you choose with Kylie"} />
+        <Historical  theHand={this.state.Kylie} nom={"What Kylie choose with you"} />
         </div>
         <div className="GrammordHand">
         <Historical  theHand={this.state.BadGrammord} nom={"What bad Grammord choose !"} />

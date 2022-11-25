@@ -2,7 +2,8 @@ import React, {useState, useEffect} from 'react';
 
 const Title = props => {
 
-    const [textTitle, settextTitle] = useState("");
+    const [textTitle, settextTitle ] = useState("");
+
 
     useEffect(() => {
         animateText("Welcome to the shifumi game !");
@@ -26,10 +27,8 @@ const Title = props => {
         <div className="TitleGame">
             {textTitle}
         </div>
- 
-
-
     );
+
 }
 
 export default Title;
