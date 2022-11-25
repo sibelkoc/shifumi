@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-image: url(/public/Sans\ titre.jpg);
+  background-image: url(../public/img/realBackground.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
