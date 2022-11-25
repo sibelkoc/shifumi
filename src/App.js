@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, useState, render } from 'react';
 import './App.css';
 import AllHands from "./AllHands";
 import ResultTitle from "./ResultTitle";
 import Historical from './Historical';
 import AnimateTxt from './AnimateTxt';
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 
 class App extends Component {
@@ -13,9 +15,16 @@ class App extends Component {
       theHand: ["rock", "paper", "scissors"],
       Kylie: "",
       BadGrammord: "",
-      theWinner: ""
+      theWinner: "", 
+      isActive: true
     }
   }
+  hideAlert() {
+    this.setState({
+      isActive: false,
+    });}
+  
+
 
   BadGrammordHand = () => {
     this.setState({ BadGrammord: this.state.theHand[Math.floor(Math.random() * 3)] },() => {
@@ -31,6 +40,8 @@ class App extends Component {
      
     })
   }
+
+    
 
   theWinner = () => {
     const { Kylie, BadGrammord } = this.state;
@@ -50,14 +61,36 @@ class App extends Component {
   }
 
 
-
   render() {
-    return (
-      <div className="App">
+    if (this.state.isActive) {
+      return(
+        
+        <div
+        className="alert alert-warning alert-dismissible"
+        role="alert"
+      >
         <div className="titleGame">
            <AnimateTxt  textTitle/>
         </div>
+        
+        <strong>Kylie :</strong> Hello, help me to fight the bad grammord !
+        <br></br>
+        <br></br>
+        <button
+          type="button"
+          className="playButton"
+          data-dismiss="alert"
+          onClick={() => this.hideAlert()}
+        >
+          <span aria-hidden="true">Let's play</span>
+        </button>
+  </div>
 
+      )
+    }
+    return (
+      <div className="App">
+      
         <div className='winPosition'>
           <ResultTitle result={this.state.theWinner}/>
         </div>
@@ -78,13 +111,15 @@ class App extends Component {
       </div>
 
 
-
-
       
       </div>
+
     );
   }
 }
+
+
+
 
 export default App;
  
