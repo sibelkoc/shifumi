@@ -1,3 +1,36 @@
+# Shifumi Game
+
+Made with React.
+
+## At a Glance
+
+![shifumi-1](https://user-images.githubusercontent.com/57089979/204108674-8da686c9-be3a-46ba-8c88-fc08fc393102.jpg)
+![shifumi-3](https://user-images.githubusercontent.com/57089979/204108676-0c9d2f8d-0b7d-443b-8f41-47fe09a19d9b.jpg)
+
+Realization of a mini game (work over two evenings).
+
+## Clone the Repository
+
+1. Create a new folder
+2. For information, the code URL will be :
+
+### `https://github.com/sibelkoc/shifumi.git`
+
+3. Open the git bash window for the new folder you just created by right clicking on the folder and clicking Git bash here.
+4. Clone the React app : On your git bash window, type `git clone`, paste the code URL of the GitHub repo, then run the command by pressing enter.
+
+### `git clone 'https://github.com/sibelkoc/shifumi.git'`
+
+5. Configure your Cloned App : On your terminal, change your directory to the name of the cloned folder `cd my-cloned-app`
+6. Don't forget to create our own `package-lock.json` file and `node_modules` folder : for that, run `npm install`
+8. start the React app with `npm start`
+
+Once the command is done running, your React app will open on your local host on your default browser.
+
+### `https:// local host:3000`
+
+-------------------------------------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
