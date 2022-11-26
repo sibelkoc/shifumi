@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import AllHands from "./AllHands";
-import ResultTitle from "./ResultTitle";
 import Historical from './Historical';
 import AnimateTxt from './AnimateTxt';
 import 'bootstrap/dist/css/bootstrap.min.css';
